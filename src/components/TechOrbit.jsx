@@ -88,44 +88,39 @@ export default function TechOrbit() {
         @keyframes orbitSpin24 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
         @keyframes counter { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
       `}</style>
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2">
-        <div>
-          <h2 className="inline-block rotate-[-2deg] border-4 border-black bg-yellow-200 px-4 py-2 text-3xl font-black shadow-[6px_6px_0_#000]">
-            My Tech Stack
-          </h2>
-          <p className="mt-4 max-w-prose rotate-[-1deg] border-4 border-black bg-lime-300 p-4 text-base font-medium shadow-[6px_6px_0_#000]">
-            Tools I use to craft fast, expressive, and interactive web apps. Now actually revolving like planets around a star.
-          </p>
-        </div>
-        <div className="relative mx-auto aspect-square w-[340px] sm:w-[420px] md:w-[520px]">
+
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto relative aspect-square w-[340px] sm:w-[420px] md:w-[560px]">
+          {/* CENTRAL TITLE: icons revolve around this label */}
           <div className="absolute inset-0 grid place-items-center">
-            <div className="z-10 rotate-[-2deg] border-4 border-black bg-amber-300 px-4 py-3 text-xl font-black shadow-[8px_8px_0_#000]">
+            <h2 className="z-10 rotate-[-2deg] border-4 border-black bg-amber-300 px-5 py-3 text-2xl md:text-3xl font-black shadow-[8px_8px_0_#000]">
               My Tech Stack
-            </div>
+            </h2>
           </div>
 
+          {/* Base outline */}
           <div className="absolute inset-0 rounded-full border-4 border-black" />
 
-          {/* Orbit 1 */}
-          <div className="absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
-            <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 animate-[orbitSpin10_12s_linear_infinite]">
+          {/* Orbit 1 (outer) */}
+          <div className="absolute left-1/2 top-1/2 h-[86%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
+            <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 animate-[orbitSpin10_14s_linear_infinite]">
               <div className="absolute left-1/2 top-0 -ml-5 -mt-5 h-10 w-10">
-                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_12s_linear_infinite]"><HTMLIcon /></div>
+                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_14s_linear_infinite]"><HTMLIcon /></div>
               </div>
               <div className="absolute left-0 top-1/2 -ml-5 -mt-5 h-10 w-10">
-                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_12s_linear_infinite]"><CSSIcon /></div>
+                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_14s_linear_infinite]"><CSSIcon /></div>
               </div>
               <div className="absolute left-1/2 bottom-0 -mb-5 -ml-5 h-10 w-10">
-                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_12s_linear_infinite]"><JSIcon /></div>
+                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_14s_linear_infinite]"><JSIcon /></div>
               </div>
               <div className="absolute right-0 top-1/2 -mr-5 -mt-5 h-10 w-10">
-                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_12s_linear_infinite]"><ReactIcon /></div>
+                <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_14s_linear_infinite]"><ReactIcon /></div>
               </div>
             </div>
           </div>
 
           {/* Orbit 2 */}
-          <div className="absolute left-1/2 top-1/2 h-[62%] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
+          <div className="absolute left-1/2 top-1/2 h-[64%] w-[64%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
             <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 animate-[orbitSpin16_18s_linear_infinite]">
               <div className="absolute left-1/2 top-0 -ml-5 -mt-5 h-10 w-10">
                 <div className="grid h-10 w-10 place-items-center rounded-full border-4 border-black bg-white shadow-[6px_6px_0_#000] animate-[counter_18s_linear_infinite]"><NodeIcon /></div>
@@ -142,8 +137,8 @@ export default function TechOrbit() {
             </div>
           </div>
 
-          {/* Orbit 3 small, faster */}
-          <div className="absolute left-1/2 top-1/2 h-[44%] w-[44%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
+          {/* Orbit 3 (inner, faster) */}
+          <div className="absolute left-1/2 top-1/2 h-[42%] w-[42%] -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-black">
             <div className="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 animate-[orbitSpin24_10s_linear_infinite]">
               <div className="absolute left-1/2 top-0 -ml-4 -mt-4 h-8 w-8">
                 <div className="grid h-8 w-8 place-items-center rounded-full border-4 border-black bg-white shadow-[5px_5px_0_#000] animate-[counter_10s_linear_infinite]"><span className="text-[10px] font-black">API</span></div>
@@ -160,6 +155,11 @@ export default function TechOrbit() {
             </div>
           </div>
         </div>
+
+        {/* Caption */}
+        <p className="mx-auto mt-8 max-w-xl rotate-[-1deg] border-4 border-black bg-lime-300 p-4 text-center text-sm font-extrabold shadow-[6px_6px_0_#000]">
+          The badges revolve around the title itself so the composition reads as one cohesive unit.
+        </p>
       </div>
     </section>
   );

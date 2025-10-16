@@ -3,7 +3,6 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import TechOrbit from './components/TechOrbit';
-import CreativeSection from './components/CreativeSection';
 
 export default function App() {
   return (
@@ -23,12 +22,15 @@ export default function App() {
 
       <main>
         <Hero />
-        <Timeline />
-        <Projects />
-        <div id="tech">
+        <section id="timeline">
+          <Timeline />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="tech">
           <TechOrbit />
-        </div>
-        <CreativeSection />
+        </section>
       </main>
 
       <footer className="border-t-4 border-black bg-white py-8">
