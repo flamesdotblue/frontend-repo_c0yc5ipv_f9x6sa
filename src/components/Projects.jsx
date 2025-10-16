@@ -7,6 +7,7 @@ const projects = [
     tags: ['React', 'Framer Motion', 'Tailwind'],
     color: 'bg-amber-300',
     link: '#',
+    img: 'https://images.unsplash.com/photo-1529101091764-c3526daf38fe?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Boldfolio',
@@ -14,6 +15,7 @@ const projects = [
     tags: ['Vite', 'CSS', 'Design'],
     color: 'bg-lime-300',
     link: '#',
+    img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
   },
   {
     title: 'Spline Playground',
@@ -21,6 +23,7 @@ const projects = [
     tags: ['Spline', 'React', 'Web'],
     color: 'bg-pink-300',
     link: '#',
+    img: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop',
   },
 ];
 
@@ -36,24 +39,29 @@ export default function Projects() {
             <a
               key={i}
               href={p.link}
-              className={`group block rotate-[-1deg] border-4 border-black ${p.color} p-5 shadow-[8px_8px_0_#000] transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0_#000]`}
+              className={`group block rotate-[-1deg] border-4 border-black ${p.color} shadow-[8px_8px_0_#000] transition-transform hover:translate-x-1 hover:translate-y-1 hover:shadow-[0_0_0_#000]`}
             >
-              <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-black">{p.title}</h3>
-                <span className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-bold shadow-[3px_3px_0_#000]">
-                  {i + 1}
-                </span>
+              <div className="aspect-video overflow-hidden border-b-4 border-black bg-white">
+                <img src={p.img} alt={p.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <p className="mt-3 text-sm font-medium text-black/80">{p.description}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {p.tags.map((t, ti) => (
-                  <span
-                    key={ti}
-                    className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-bold shadow-[3px_3px_0_#000]"
-                  >
-                    {t}
+              <div className="p-5">
+                <div className="flex items-start justify-between">
+                  <h3 className="text-2xl font-black">{p.title}</h3>
+                  <span className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-bold shadow-[3px_3px_0_#000]">
+                    {i + 1}
                   </span>
-                ))}
+                </div>
+                <p className="mt-3 text-sm font-medium text-black/80">{p.description}</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {p.tags.map((t, ti) => (
+                    <span
+                      key={ti}
+                      className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-bold shadow-[3px_3px_0_#000]"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </a>
           ))}

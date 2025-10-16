@@ -9,9 +9,13 @@ export default function Hero() {
           <span className="inline-block rotate-[-2deg] border-4 border-black bg-white px-3 py-1 text-xs font-black uppercase tracking-widest shadow-[6px_6px_0_#000]">
             Portfolio • Neo-Brutal
           </span>
-          <h1 className="mt-6 text-5xl font-black leading-tight text-black drop-shadow-[6px_6px_0_#000] sm:text-6xl">
-            Anchal Gupta
-          </h1>
+
+          <div className="mt-6 inline-block rotate-[-2deg] border-4 border-black bg-amber-300 px-4 py-3 shadow-[8px_8px_0_#000]">
+            <h1 className="text-5xl font-black leading-tight text-black sm:text-6xl">
+              Anchal Gupta
+            </h1>
+          </div>
+
           <p className="mt-4 max-w-prose rotate-[-1deg] border-4 border-black bg-white p-4 text-lg font-medium shadow-[6px_6px_0_#000]">
             Creative developer crafting playful, interactive web experiences. I design with bold shapes, heavy borders, and delightful motion.
           </p>

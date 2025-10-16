@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Projects from './components/Projects';
 import TechOrbit from './components/TechOrbit';
+import CreativeSection from './components/CreativeSection';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
         <div id="tech">
           <TechOrbit />
         </div>
+        <CreativeSection />
       </main>
 
       <footer className="border-t-4 border-black bg-white py-8">
