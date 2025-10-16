@@ -1,28 +1,41 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Timeline from './components/Timeline';
+import Projects from './components/Projects';
+import TechOrbit from './components/TechOrbit';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-yellow-200 text-black">
+      <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+          <a href="#" className="rotate-[-2deg] border-4 border-black bg-yellow-200 px-3 py-1 text-sm font-black shadow-[5px_5px_0_#000]">
+            AG
+          </a>
+          <nav className="flex items-center gap-3">
+            <a href="#timeline" className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-extrabold shadow-[3px_3px_0_#000]">Timeline</a>
+            <a href="#projects" className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-extrabold shadow-[3px_3px_0_#000]">Projects</a>
+            <a href="#tech" className="rounded-none border-2 border-black bg-white px-2 py-1 text-xs font-extrabold shadow-[3px_3px_0_#000]">Tech</a>
+          </nav>
         </div>
-      </div>
-    </div>
-  )
-}
+      </header>
 
-export default App
+      <main>
+        <Hero />
+        <Timeline />
+        <Projects />
+        <div id="tech">
+          <TechOrbit />
+        </div>
+      </main>
+
+      <footer className="border-t-4 border-black bg-white py-8">
+        <div className="mx-auto max-w-7xl px-6">
+          <p className="rotate-[-1deg] border-4 border-black bg-lime-300 px-4 py-2 text-sm font-black shadow-[5px_5px_0_#000]">
+            © {new Date().getFullYear()} Anchal Gupta — Built with love, motion, and chunky borders.
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}
